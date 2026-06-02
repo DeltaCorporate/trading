@@ -5,7 +5,7 @@
 
 const COURSE = {
   title: "Formation Trading",
-  subtitle: "De débutant à trader structuré — Smart Money Concepts",
+  subtitle: "Spécialisation XAU/USD (Or) — Smart Money Concepts",
   modules: [
 
     /* ===================== MODULE 1 ===================== */
@@ -41,15 +41,15 @@ const COURSE = {
 <p>Tous les actifs ne se tradent pas de la même manière. Voici les principaux que vous croiserez dans cette formation.</p>
 <h3>Forex (devises)</h3>
 <p>L'échange de paires de devises (EUR/USD, GBP/JPY…). C'est le marché le plus liquide au monde, ouvert 24h/24 du lundi au vendredi.</p>
-<h3>Or (XAU/USD)</h3>
-<p>Valeur refuge par excellence. Très volatil, réagit fortement aux taux d'intérêt et à l'incertitude économique.</p>
+<h3>Or (XAU/USD) — notre actif principal</h3>
+<p>Valeur refuge par excellence et <strong>cœur de cette formation</strong>. Très volatil, il réagit fortement aux taux d'intérêt, à l'inflation (CPI) et à l'incertitude géopolitique. Sa volatilité offre de belles opportunités… mais exige une gestion du risque irréprochable.</p>
 <h3>Indices</h3>
 <p>Paniers d'actions : NASDAQ (US100), S&amp;P 500 (US500), DAX (GER40). On trade « le marché » dans son ensemble plutôt qu'une action isolée.</p>
 <h3>Matières premières</h3>
 <p>Pétrole, gaz, blé, argent… Sensibles à l'offre/demande physique et à la géopolitique.</p>
 <h3>Bitcoin / Crypto</h3>
 <p>Marché ouvert 24h/24, 7j/7. Très volatil, idéal pour s'entraîner mais à manier avec une gestion du risque stricte.</p>
-<div class="callout callout-tip"><strong>Conseil :</strong> au début, spécialisez-vous sur <strong>1 à 2 actifs</strong> (ex. EUR/USD et XAU/USD). Chaque actif a son « caractère ».</div>`
+<div class="callout callout-key"><strong>Le fil rouge de cette formation :</strong> nous nous spécialisons sur l'<strong>or (XAU/USD)</strong>. Se concentrer sur UN seul actif, c'est en apprendre le « caractère » : ses horaires, sa volatilité, ses pièges. C'est le chemin le plus rapide vers la régularité.</div>`
         },
         {
           title: "Comment fonctionne un trade",
@@ -988,20 +988,86 @@ Repérez une journée où NY a inversé le mouvement de Londres. Comment l'aurie
 <div class="callout callout-warn"><strong>Attention :</strong> le risque variable est réservé aux traders expérimentés. Débutant = risque fixe, point.</div>`
         },
         {
-          title: "Position sizing",
-          minutes: 11,
+          title: "Position sizing (calcul de lot sur l'or)",
+          minutes: 13,
           html: `
-<p>Le <strong>position sizing</strong> est le calcul de la taille de lot pour ne risquer QUE le montant prévu. C'est non négociable.</p>
-<h3>La formule</h3>
-<p class="formula">Taille de position = (Capital × % risque) ÷ (Distance du stop en valeur par unité)</p>
-<h3>Exemple concret</h3>
+<p>Le <strong>position sizing</strong> est le calcul de la taille de lot pour ne risquer QUE le montant prévu. Sur l'or (XAU/USD), c'est l'étape la plus importante de tout le métier — et la plus mal maîtrisée des débutants.</p>
+
+<h3>1. Comprendre le contrat XAU/USD</h3>
+<p>Chez la plupart des brokers, l'or se trade par lots de <strong>100 onces</strong>. La valeur d'un mouvement de prix dépend donc directement de la taille de lot :</p>
+<table class="tbl">
+  <thead><tr><th>Lot</th><th>Onces</th><th>Mouvement de 1,00 $</th><th>Mouvement de 0,10 $</th></tr></thead>
+  <tbody>
+    <tr><td>1,00 (standard)</td><td>100 oz</td><td>100 $</td><td>10 $</td></tr>
+    <tr><td>0,10 (mini)</td><td>10 oz</td><td>10 $</td><td>1 $</td></tr>
+    <tr><td>0,01 (micro)</td><td>1 oz</td><td>1 $</td><td>0,10 $</td></tr>
+  </tbody>
+</table>
+<div class="callout callout-warn"><strong>Attention au mot « pip » sur l'or :</strong> il varie selon les brokers et crée des erreurs de sizing graves. Pour ne jamais vous tromper, raisonnez en <strong>dollars de mouvement du prix</strong> (ex. de 2000 $ à 1995 $ = 5 $). C'est universel.</div>
+
+<h3>2. La formule (or)</h3>
+<p class="formula">Taille de lot = Risque ($) ÷ ( Distance du stop ($) × 100 )</p>
+<p>Le « × 100 » vient du fait qu'1 lot = 100 onces. La « distance du stop » est l'écart en dollars entre votre entrée et votre stop-loss.</p>
+
+<h3>3. Exemple déroulé pas à pas</h3>
 <ul>
-  <li>Capital : 10 000 $</li>
-  <li>Risque : 1 % = 100 $</li>
-  <li>Stop : 50 pips</li>
-  <li>→ On choisit la taille de lot telle que 50 pips = 100 $.</li>
+  <li><strong>Capital</strong> : 10 000 $</li>
+  <li><strong>Risque</strong> : 1 % → 10 000 × 0,01 = <strong>100 $</strong></li>
+  <li><strong>Entrée</strong> : 2000 $ · <strong>Stop</strong> : 1995 $ → distance = <strong>5 $</strong></li>
 </ul>
-<div class="callout callout-key"><strong>À retenir :</strong> on ajuste TOUJOURS la taille de position en fonction du stop, jamais l'inverse. Le stop dépend de la technique, pas du montant qu'on « veut » risquer.</div>`
+<p class="formula">Lot = 100 ÷ (5 × 100) = 100 ÷ 500 = <strong>0,20 lot</strong></p>
+<p><strong>Vérification :</strong> 0,20 lot × 5 $ × 100 = 100 $. ✓ Si le stop saute, vous perdez exactement 1 % du compte, ni plus ni moins.</p>
+
+<div class="callout callout-key"><strong>À retenir :</strong> on ajuste TOUJOURS la taille de lot en fonction du stop, jamais l'inverse. Le stop est défini par la technique (l'invalidation, Module 12), pas par le montant qu'on « veut » risquer.</div>`
+        },
+        {
+          title: "Calcul de lot XAU/USD — exemples chiffrés",
+          minutes: 12,
+          type: "exercise",
+          html: `
+<p>Ancrons le réflexe avec plusieurs cas concrets sur l'or. La formule à mémoriser :</p>
+<p class="formula">Lot = Risque ($) ÷ ( Stop ($) × 100 )</p>
+<p>Et l'inverse, pour vérifier une perte : <em>Perte = Lot × Stop ($) × 100</em>.</p>
+
+<h3>Exemple 1 — petit compte</h3>
+<ul>
+  <li>Capital 1 000 $ · risque 1 % = 10 $</li>
+  <li>Entrée 2000 $ · stop 1997 $ → distance = 3 $</li>
+</ul>
+<p class="formula">Lot = 10 ÷ (3 × 100) = 10 ÷ 300 = 0,033 → arrondi à <strong>0,03 lot</strong></p>
+<p>Vérif : 0,03 × 3 × 100 = 9 $ (≈ 0,9 %). ✓ On arrondit toujours vers le <strong>bas</strong> pour ne pas dépasser le risque.</p>
+
+<h3>Exemple 2 — stop large (l'or bouge vite)</h3>
+<ul>
+  <li>Capital 10 000 $ · risque 1 % = 100 $</li>
+  <li>Stop de 10 $ (ex. 2000 → 1990)</li>
+</ul>
+<p class="formula">Lot = 100 ÷ (10 × 100) = 100 ÷ 1000 = <strong>0,10 lot</strong></p>
+<p>Take profit à 1:3 = 30 $ de mouvement → gain = 0,10 × 30 × 100 = <strong>300 $</strong>. ✓</p>
+
+<h3>Exemple 3 — compte prop firm</h3>
+<ul>
+  <li>Capital 50 000 $ · risque 0,5 % = 250 $</li>
+  <li>Stop de 4 $</li>
+</ul>
+<p class="formula">Lot = 250 ÷ (4 × 100) = 250 ÷ 400 = 0,625 → <strong>0,62 lot</strong></p>
+
+<h3>Table de référence (valeur d'un mouvement)</h3>
+<table class="tbl">
+  <thead><tr><th>Lot</th><th>Stop 3 $</th><th>Stop 5 $</th><th>Stop 10 $</th></tr></thead>
+  <tbody>
+    <tr><td>0,01</td><td>3 $</td><td>5 $</td><td>10 $</td></tr>
+    <tr><td>0,10</td><td>30 $</td><td>50 $</td><td>100 $</td></tr>
+    <tr><td>1,00</td><td>300 $</td><td>500 $</td><td>1 000 $</td></tr>
+  </tbody>
+</table>
+
+<div class="callout callout-tip"><strong>Conseil :</strong> un <strong>calculateur de position</strong> (Babypips, Myfxbook) ou le panneau d'ordre MT5 fait le calcul pour vous — mais sachez le refaire à la main pour repérer une erreur.</div>
+<div class="callout callout-warn"><strong>Vérifiez VOTRE broker :</strong> certains cotent l'or avec une taille de contrat différente ou 3 décimales. Faites un trade test en démo et mesurez le P&amp;L réel d'un mouvement de 1 $ pour confirmer que « 1,00 lot → 100 $ ».</div>
+
+<div class="callout callout-exercise">
+<strong>À vous :</strong> Capital 2 000 $, risque 1 %, entrée 2010 $, stop 2003 $. Quelle taille de lot ? <br><span class="muted">(Réponse : risque 20 $, stop 7 $ → 20 ÷ 700 = 0,028 → <strong>0,02 lot</strong>.)</span>
+</div>`
         },
         {
           title: "Drawdown",
@@ -1067,17 +1133,19 @@ Repérez une journée où NY a inversé le mouvement de Londres. Comment l'aurie
           type: "exercise",
           html: `
 <div class="callout callout-exercise">
-<strong>Exercice 1 — Sizing</strong><br>
-Capital 5 000 $, risque 1 %, stop 30 pips sur EUR/USD. Calculez la taille de lot.
+<strong>Exercice 1 — Sizing sur l'or</strong><br>
+Capital 5 000 $, risque 1 %, entrée XAU/USD à 2000 $, stop à 1994 $. Calculez la taille de lot.<br>
+<span class="muted">Indice : risque = 50 $, stop = 6 $ → Lot = 50 ÷ (6 × 100).</span>
 </div>
 <div class="callout callout-exercise">
 <strong>Exercice 2 — Espérance</strong><br>
-Win rate 50 %, R:R 1:2, risque 50 $. Quelle est l'espérance par trade ? Sur 100 trades ?
+Win rate 50 %, R:R 1:2, risque 50 $ par trade. Quelle est l'espérance par trade ? Et sur 100 trades ?
 </div>
 <div class="callout callout-exercise">
 <strong>Exercice 3 — Drawdown</strong><br>
-Vous perdez 8 trades d'affilée à 1 % chacun. Quel est votre drawdown approximatif ? Est-ce gérable ?
-</div>`
+Vous perdez 8 trades d'affilée à 1 % chacun sur l'or. Quel est votre drawdown approximatif ? Est-ce gérable ?
+</div>
+<div class="callout callout-tip"><strong>Corrigés :</strong> Ex.1 → 50 ÷ 600 = 0,083 → <strong>0,08 lot</strong>. · Ex.2 → (0,5 × 100) − (0,5 × 50) = <strong>+25 $/trade</strong>, soit <strong>+2 500 $</strong> sur 100 trades. · Ex.3 → ≈ <strong>−7,7 %</strong> de drawdown : inconfortable mais largement gérable avec 1 % de risque.</div>`
         }
       ]
     },
