@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Trading — Smart Money Concepts</title>
+  <meta name="description" content="Formation complète au trading : du débutant au trader structuré. 16 modules, Smart Money Concepts, gestion du risque et psychologie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <button id="menuToggle" class="icon-btn" aria-label="Menu">☰</button>
+    <a href="#accueil" class="brand">
+      <span class="brand-mark">▲</span>
+      <span class="brand-text">Formation Trading</span>
+    </a>
+    <div class="topbar-actions">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Rechercher une leçon…" autocomplete="off" />
+        <div id="searchResults" class="search-results" hidden></div>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Changer de thème" title="Changer de thème">🌙</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="progress-card">
+        <div class="progress-head">
+          <span>Progression</span>
+          <span id="progressPct">0%</span>
+        </div>
+        <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        <button id="resetProgress" class="link-btn">Réinitialiser</button>
+      </div>
+      <nav id="nav" class="nav"><!-- généré par app.js --></nav>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Content -->
+    <main id="content" class="content"><!-- généré par app.js --></main>
+  </div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
